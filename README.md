@@ -14,7 +14,6 @@
 | 17/0108341 | [Levi de Oliveira Queiroz](https://github.com/LeviQ27) |	
 | 17/0111059 | [Matheus Fonseca Sousa](https://github.com/gatotabaco) |	
 | 19/0093331 | [Matheus Costa Gomes](https://github.com/mc-gomes) |	
-| 21/2005444 | [Pedro fonseca Cruz]()	|
 | 21/1029559 | [Rafael Brito Bosi Rodrigues](https://github.com/StrangeUnit28) |	
 | 16/0149410 | [Yudi Yamane de Azevedo](https://github.com/yudi-azvd)	| 
 
