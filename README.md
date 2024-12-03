@@ -59,7 +59,6 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | [Levi de Oliveira Queiroz](https://github.com/LeviQ27) |	  |  |   |
 | [Matheus Fonseca Sousa](https://github.com/gatotabaco) |	  |  |   |
 | [Matheus Costa Gomes](https://github.com/mc-gomes) |	  |  |   |
-| [Pedro fonseca Cruz]()	|  |  |   |
 | [Rafael Brito Bosi Rodrigues](https://github.com/StrangeUnit28) |	  |  |   |
 | [Yudi Yamane de Azevedo](https://github.com/yudi-azvd)	|   |  |   |
 
