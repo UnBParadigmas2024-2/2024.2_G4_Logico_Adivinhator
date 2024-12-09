@@ -1,8 +1,6 @@
 % swipl -o advinhator -g main -c main.pl
 % swipl -q -s main.pl 
+:- [interface].
 
-main :-
-    write('Ola Prolog'), nl.
-
-:- main.
+main :- menu.
 
