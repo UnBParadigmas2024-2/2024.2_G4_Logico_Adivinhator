@@ -52,6 +52,10 @@ caracteristicas_animal(mariposa, ["noturno", "herbívoro", "floresta", "voa", "p
 caracteristicas_animal(abelha, ["diurno", "onívoro", "floresta", "voa", "pequena", "produz mel", "vive em colmeias"]).
 caracteristicas_animal(caracol, ["diurno", "herbívoro", "jardins", "não_voa", "concha", "lento", "ambientes húmidos"]).
 caracteristicas_animal(lesma, ["noturno", "herbívoro", "floresta", "não_voa", "sem concha", "lento", "se movimenta com muco"]).
+caracteristicas_animal(coruja, ["noturno", "carnívoro", "campos abertos", "voa", "garras", "veloz", "caçador"]).
+caracteristicas_animal(humano, ["diurno", "onívoro", "cidade", "não_voa", "capacidade de fala", "usa ferramentas", "sente inveja"]).
+caracteristicas_animal(baleia, ["diurno", "carnívoro", "oceano", "não_voa", "usam ecolocalização", "grande", "é caçado pela gordura"]).
+caracteristicas_animal(golfinho, ["diurno", "carnívoro", "oceano", "não_voa", "usam ecolocalização", "médio", "sente prazer durante sexo"]).
 
 % Animais específicos
 animal(predadores, leão).
