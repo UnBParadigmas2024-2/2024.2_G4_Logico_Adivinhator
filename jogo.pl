@@ -1,4 +1,4 @@
-:- [base_animais]. % import da base de dados
+:- [new_base_animais]. % import da base de dados
 
 % Início do jogo
 jogar :-
@@ -16,7 +16,7 @@ encontrar_animal(Animal) :-
 
 
 listar_animais(Animais) :-
-    findall(A, e_um(A, _), Animais). % num primeiro momento vai listar todos os animais
+    findall(A, animal(_, A), Animais). % num primeiro momento vai listar todos os animais
 
 
 escolher_animal([Animal], _, Animal) :- !. % caso de só um animal
