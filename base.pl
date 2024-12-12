@@ -192,4 +192,3 @@ caracteristicas_animal(avestruz, [
     "corre_rapido", "grande", "não_voa", "vive_em_bando"
 ]).
 
-caracteristicas_animal(Serpente marinha , [sabia,tem osso,sabe assoviar]).

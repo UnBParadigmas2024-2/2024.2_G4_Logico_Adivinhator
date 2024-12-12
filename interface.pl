@@ -1,6 +1,7 @@
 % interface.pl
 :- use_module(library(pce)).
 :- [base].
+:- [perguntas].
 
 :- dynamic current_questions/1.
 :- dynamic possible_animals/1.
@@ -51,10 +52,10 @@ next_question(Dialog) :-
     (Animals = [Animal] ->
         show_guess(Dialog, Animal)
     ; Animals = [] ->
-        show_failure(Dialog)
+        show_error(Dialog)
     ; select_next_question(Animals, Asked, Question, QuestionText) ->
         show_question(Dialog, Question, QuestionText)
-    ; show_failure(Dialog)
+    ; show_error(Dialog)
     ).
 
 select_next_question(Animals, Asked, Question, QuestionText) :-
@@ -84,10 +85,13 @@ show_question(Dialog, Question, QuestionText) :-
         message(@prolog, handle_answer, Dialog, Question, yes))),
     new(NoBtn, button('Não',
         message(@prolog, handle_answer, Dialog, Question, no))),
+    new(DontKnowBtn, button('Não Sei',
+        message(@prolog, handle_answer, Dialog, Question, dont_know))),
     
     send(Dialog, append, QuestionLabel),
     send(Dialog, append, YesBtn),
     send(Dialog, append, NoBtn),
+    send(Dialog, append, DontKnowBtn),
     send(Dialog, layout).
 
 handle_answer(Dialog, Question, Answer) :-
@@ -99,7 +103,10 @@ handle_answer(Dialog, Question, Answer) :-
     
     (Answer = yes ->
         include(has_characteristic(Question), Current, Filtered)
-    ;   exclude(has_characteristic(Question), Current, Filtered)
+    ; Answer = no ->
+        exclude(has_characteristic(Question), Current, Filtered)
+    ; Answer = dont_know ->
+        Filtered = Current 
     ),
     
     retract(possible_animals(Current)),
@@ -114,10 +121,10 @@ show_guess(Dialog, Animal) :-
     send(GuessText, font, font(screen, bold, 24)),
     send(GuessText, colour(white)),
     
-    new(CorrectBtn, button('Acertei!',
+    new(CorrectBtn, button('Acertou!',
         message(@prolog, show_win, Dialog))),
-    new(WrongBtn, button('Errei...',
-        message(@prolog, show_failure, Dialog))),
+    new(WrongBtn, button('Errou!',
+        message(@prolog, show_error, Dialog))),
     
     send(Dialog, append, GuessText),
     send(Dialog, append, CorrectBtn),
@@ -137,17 +144,63 @@ show_win(Dialog) :-
     send(Dialog, append, PlayAgainBtn),
     send(Dialog, layout).
 
-show_failure(Dialog) :-
+show_error(Dialog) :-
     send(Dialog, clear),
-    new(FailText, text('Não consegui adivinhar...')),
-    send(FailText, font, font(screen, bold, 24)),
-    send(FailText, colour(white)),
-    
-    new(PlayAgainBtn, button('Tentar Novamente',
+
+    new(ErrorText, text('Não consegui adivinhar!')),
+    send(ErrorText, font, font(screen, bold, 24)),
+    send(ErrorText, colour(white)),
+
+    new(AddAnimalBtn, button('Adicionar Novo Animal',
+        message(@prolog, add_new_animal, Dialog))),
+    new(CancelBtn, button('Cancelar',
         message(@prolog, initialize_game, Dialog))),
-    
-    send(Dialog, append, FailText),
-    send(Dialog, append, PlayAgainBtn),
+
+    send(Dialog, append, ErrorText),
+    send(Dialog, append, AddAnimalBtn),
+    send(Dialog, append, CancelBtn),
     send(Dialog, layout).
+
+add_new_animal(Dialog) :-
+    send(Dialog, clear),
+
+    % Animal name input
+    new(AnimalLabel, text('Qual era o animal?')),
+    send(AnimalLabel, font, font(screen, bold, 20)),
+    send(AnimalLabel, colour(white)),
+    new(AnimalInput, text_item('Animal')),
+
+    % Characteristics input
+    new(CharsLabel, text('Digite as características separadas por vírgulas:')),
+    send(CharsLabel, font, font(screen, bold, 20)),
+    send(CharsLabel, colour(white)),
+    new(CharsInput, text_item('Características')),
+
+    % Buttons
+    new(SaveBtn, button('Salvar',
+        message(@prolog, save_new_animal, Dialog, AnimalInput?selection, CharsInput?selection))),
+    new(CancelBtn, button('Cancelar',
+        message(@prolog, initialize_game, Dialog))),
+
+    % Layout
+    send(Dialog, append, AnimalLabel),
+    send(Dialog, append, AnimalInput),
+    send(Dialog, append, CharsLabel),
+    send(Dialog, append, CharsInput),
+    send(Dialog, append, SaveBtn),
+    send(Dialog, append, CancelBtn),
+    send(Dialog, layout).
+
+save_new_animal(Dialog, Animal, Chars) :-
+    atom_string(AnimalAtom, Animal),
+    split_string(Chars, ',', ' ', CharsList),
+    maplist(string_to_atom, CharsList, CharsAtoms),
+    
+    % Save to base.pl
+    open('base.pl', append, Stream),
+    format(Stream, 'caracteristicas_animal(~w, ~w).~n', [AnimalAtom, CharsAtoms]),
+    close(Stream),
+
+    initialize_game(Dialog).
 
 :- initialization(menu).
