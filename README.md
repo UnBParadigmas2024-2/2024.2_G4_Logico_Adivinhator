@@ -32,7 +32,7 @@ A estrutura do sistema é baseada em uma interface gráfica que facilita a inter
 
 ## Screenshots
 
-O primeiro vído mostra o projeto acertando o animal pensado
+O vídeo mostra o projeto do adivinhator em execução
 
 <img src="./imagens/adivinhator_funcionando.gif" alt="Gif do projeto em funcionamento" style="max-width:100%; height:auto;">
 
