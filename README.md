@@ -145,7 +145,7 @@ A seguir, explicamos como utilizar o projeto final com a interface gráfica e, e
 swipl
 ```
 
-![Swipl](./imagens/swipl.png)
+<img src="./imagens/swipl.png" alt="Swipl" width="600" />
 
 Carregue o arquivo principal (por exemplo, main.pl) com o comando:
 
@@ -153,7 +153,7 @@ Carregue o arquivo principal (por exemplo, main.pl) com o comando:
 ?- [main].
 ```
 
-![main](./imagens/comando_main.png)
+<img src="./imagens/comando_main.png" alt="main" width="600" />
 
 Isso iniciará o jogo, e você poderá interagir com a interface gráfica.
 
@@ -161,8 +161,7 @@ Isso iniciará o jogo, e você poderá interagir com a interface gráfica.
 
 Ao iniciar o programa, o menu principal será exibido. O título do jogo é Adivinhator e o subtítulo instrui o jogador a pensar em um animal, pois o sistema tentará adivinhar qual é.
 
-![Tela Inicial](./imagens/tela_inicio.png)
-Imagem 1: Tela inicial do jogo
+<img src="./imagens/tela_inicio.png" alt="Tela Inicial" width="500" />
 
 Clique no botão "Começar" para iniciar o jogo. Isso iniciará o processo de adivinhação.
 
@@ -170,7 +169,7 @@ Clique no botão "Começar" para iniciar o jogo. Isso iniciará o processo de ad
 
 O sistema começará a fazer uma série de perguntas para tentar adivinhar o animal em que você está pensando. Para cada pergunta, você deverá responder "Sim", "Não" ou "Não Sei".
 
-![Perguntas](./imagens/primeira_pergunta.png)
+<img src="./imagens/primeira_pergunta.png" alt="Perguntas" width="500" />
 
 - Sim: Significa que o animal possui a característica relacionada à pergunta.
 - Não: Significa que o animal não possui a característica.
@@ -185,15 +184,18 @@ Se o sistema conseguir adivinhar o animal, uma mensagem será exibida com a supo
 - Acertou: Caso o animal esteja correto.
 - Errou: Caso o animal não esteja correto.
 
-![Chute](./imagens/chute_adivinhator.png)
+<img src="./imagens/chute_adivinhator.png" alt="Chute" width="500" />
 
 Se o sistema não conseguir adivinhar o animal, ele exibirá uma mensagem de erro junto com a opção de adicionar um novo animal à base de dados.
+
+<img src="./imagens/nao_adivinhou.png" alt="Fim_Errou" width="500" />
 
 6. **Adicionando um Novo Animal**
 
 Caso o sistema erre, você terá a opção de adicionar um novo animal à base de dados. Para isso, será solicitado o nome do animal e suas características (separadas por vírgulas).
 
-![Adicionar Animal](./imagens/adiciona_animal.png)
+<img src="./imagens/adiciona_animal.png" alt="Adicionar Animal" width="500" />
+
 
 - Passo 1: Informe o nome do animal que você estava pensando.
 - Passo 2: Informe as características do animal, separadas por vírgulas (por exemplo, "tem penas, voa, pequeno").
@@ -201,13 +203,13 @@ Caso o sistema erre, você terá a opção de adicionar um novo animal à base d
 
 O animal salvo será escrito diretamente no arquivo [base.pl](./base.pl), assim como mostrado na imagem abaixo.
 
-![Escrita do animal](./imagens/animal_adicionado.png)
+<img src="./imagens/animal_adicionado.png" alt="Escrita do animal" width="500" />
 
 7. **Finalizando o Jogo**
 
 Quando o jogo termina, você pode optar por jogar novamente clicando em "Jogar Novamente" ou sair clicando em "Cancelar". O jogo será reiniciado com a base de dados atualizada, levando em consideração os novos animais adicionados.
 
-![Fim](./imagens/acertou.png)
+<img src="./imagens/acertou.png" alt="Fim" width="500" />
 
 ### Fluxo Completo
 
