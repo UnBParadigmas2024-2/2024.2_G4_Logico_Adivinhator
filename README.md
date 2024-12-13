@@ -30,13 +30,6 @@ A estrutura do sistema é baseada em uma interface gráfica que facilita a inter
 - **Inferência e Regras:** O sistema usa regras de inferência para determinar quais perguntas fazer, com base nas características dos animais disponíveis. Ele ajusta as opções de animais possíveis a cada resposta do usuário, aplicando uma lógica de exclusão ou inclusão.
 - **Adição de Novos Animais:** Caso o sistema não consiga adivinhar o animal, ele oferece a opção de adicionar um novo animal à base de dados, incluindo suas características. Isso permite que o jogo aprenda novos animais à medida que é jogado.
 
-### Links Úteis
-
-- [Documentação Prolog](https://www.swi-prolog.org/pldoc/index.html)
-- [Biblioteca pce no SWI-Prolog](https://www.swi-prolog.org/packages/xpce/)
-
-Este projeto é aberto a sugestões e contribuições. Sinta-se à vontade para contribuir com melhorias, adicionar novos recursos ou simplesmente compartilhar feedback.
-
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
@@ -284,22 +277,50 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |       Nome do Membro        | Contribuição                                                                 | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) | Comprobatórios (ex. links para commits) |
 | :-------------------------: | ---------------------------------------------------------------------------- | :----------------------------------------------------------------------------: | :-------------------------------------: |
 | [Abdul hannan](https://github.com/hannanhunny01)	|  |  |   |
-| [Arthur de Melo Viana](https://github.com/arthurmlv)	|  |  |   |
-| [Deivid Carvalho](https://github.com/deivid-a1) |	  |  |   |
-| [Felipe de Jesus Rodrigues](https://github.com/felipeJRdev) |  |  |   |
+| [Arthur de Melo Viana](https://github.com/arthurmlv)	| Criação de uma das estruturas para a organização das tabelas para a base de dados dos animais e População da base | Boa |  [Estrutura](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/d0dd529884c018c16e4652d63bc0a71ca456de5c) e [População](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/25f916465e2b04247829e65cf628ab4727e7ecab) |
+| [Deivid Carvalho](https://github.com/deivid-a1) | Criação das bases iniciais, através do padrão implementado por um dos membros. Através disso, ampliação da base de animais. Quando foi implementada a base, integração junto as demais desenvolvidas pelos restante do grupo, para que as duplas pudessem desenvolver o jogo Akinator baseado nessa base.  | Boa |   |
+| [Felipe de Jesus Rodrigues](https://github.com/felipeJRdev) | Adicionei regras para ser utilizada para criação de perguntas de acordo com a base de dados fornecida para a versão prototípica (terminal) | Boa | [5d85be8c374c2d5499dadf48f52becfba0c851ae](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/5d85be8c374c2d5499dadf48f52becfba0c851ae) e [e653d79f90b39ab639554517f0c5b6e5fd066a09](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/e653d79f90b39ab639554517f0c5b6e5fd066a09) e [8e68dee9f8fb5c4f814242d6e131e9d09ca702d0](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/8e68dee9f8fb5c4f814242d6e131e9d09ca702d0) e [6d73811c2e5acf246034dd79e26a491cc7b44c5e](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/6d73811c2e5acf246034dd79e26a491cc7b44c5e) |
 | [Levi de Oliveira Queiroz](https://github.com/LeviQ27) |	  |  |   |
-| [Matheus Fonseca Sousa](https://github.com/gatotabaco) |	  |  |   |
-| [Matheus Costa Gomes](https://github.com/mc-gomes) |	  |  |   |
-| [Rafael Brito Bosi Rodrigues](https://github.com/StrangeUnit28) |	  |  |   |
-| [Yudi Yamane de Azevedo](https://github.com/yudi-azvd)	|   |  |   |
+| [Matheus Fonseca Sousa](https://github.com/gatotabaco) |	Contribuí apenas na parte de documentação e participei das reuniões do grupo.  | Ruim |   |
+| [Matheus Costa Gomes](https://github.com/mc-gomes) | Contribuí com a criação e estruturação da base de dados  | Boa | Hash dos commits: 41ebed94e514957b4cd1d6ec92971a9ca1d9da43; 35f4f32e4fa85f2515525f00cc1d3b140809b6ea; 1baee24414a0dd8b76eb2a1ff6af41c758cf1953; d4c454a631ad5eef0fcab15b2be08ed5f8c73e6e;  |
+| [Rafael Brito Bosi Rodrigues](https://github.com/StrangeUnit28) |	Adicionei novas perguntas e animais, além de separar o banco de dados dos animais das perguntas. Adicionei o botão "não sei" ao front e criei a funcionalidade de adicionar animais. Escrevi grande parte da documentação do projeto  | Excelente  |  [Perguntas e separação dos bancos](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/e144627bdfd7fe9288cf96bbc442b07897c42eb3), [Botão de não sei e novos animais](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/bde5c48707832819ff5072470678939a75587005), [Documentação](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/1390d510a12ff2c49b244b24121ff1ae71363c5c)  |
+| [Yudi Yamane de Azevedo](https://github.com/yudi-azvd)	| Adicionei alguns animais e fiz a interface gráfica  | Boa | [fafb409f52d59417c5b194e72e172f6f2a715aaa](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/fafb409f52d59417c5b194e72e172f6f2a715aaa) e [ea9b2c86b6a7692afdb2f3544738c3b4b7a58034](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/ea9b2c86b6a7692afdb2f3544738c3b4b7a58034) e [82b97080b07b3f9839e242e6bb4e5e9f37a4a71c](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/82b97080b07b3f9839e242e6bb4e5e9f37a4a71c) e [5081b0a337ef9c3bbc35689f18fc45a8c1f11a1b](https://github.com/UnBParadigmas2024-2/2024.2_G4_Logico_Adivinhator/commit/5081b0a337ef9c3bbc35689f18fc45a8c1f11a1b)  |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
+Nesse tópicos estão disponibilizadas algumas percepções dos membros do grupo, que foram coletadas através de um [Formulário Google](https://forms.gle/ugf73WBVsot1aydu6) e pode ter suas respostas checadas no [link](https://docs.google.com/spreadsheets/d/1YZUAIQYfyW59Kl_nV3tkhs_0eo9EV-L4dbEhA5MT0bg/edit?usp=sharing). Em alguns subtópicos, percepções reduntantes foram enxugadas para melhor compreensão do leitor.
+
+### Lições Aprendidas e percepções
+Relatos de cada um dos colegas:
+ - "O paradigma lógico, especialmente com o uso do Prolog, é único porque muda completamente a maneira como pensamos sobre problemas e como interagimos com a máquina. Ao contrário de linguagens imperativas, onde o foco está em definir como o programa deve realizar as tarefas, o paradigma lógico concentra-se no quê deve ser verdade."
+ - "Achei um paradigma bem interessante devido sua lógica por trás da implementação, que é capaz de fazer inferências e permitir de forma preditiva."
+ - "Achei bem interessante a capacidade da linguagem de fazer as análises por debaixo dos panos, podendo trazer bons resultados preditivos a depender da base."
+ - "Desenvolver este projeto foi uma experiência incrível para aprofundar meus conhecimentos sobre o paradigma lógico e explorar suas particularidades, especialmente usando Prolog. Trabalhar com fatos, regras e inferências me ajudou a entender de forma mais prática como a lógica declarativa funciona no dia a dia. Vi, também, como é possível criar soluções inteligentes e dinâmicas, ao mesmo tempo em que enfrentei os desafios únicos desse estilo de programação."
+ - "Aprendi o papel do paradigma lógico, especialmente como as relações e fatos contribuem para uma boa modelagem do conhecimento."
+ - "Esse jogo utiliza a inferência lógica para deduzir informações a partir das perguntas feitas ao jogador, ilustrando o poder do paradigma lógico para criar sistemas interativos baseados em raciocínio automático."
+ - "Aprendi a criar e ampliar uma base de conhecimento de animais, integrando-a com as contribuições dos colegas. Essa base foi usada para desenvolver um jogo estilo Akinator, mostrando como o trabalho em equipe e a lógica estruturada podem criar algo interativo e divertido."
+ - "Aprendi a lidar com a estrutura do que seriam as tabelas (os fatos) de um banco de dados não-relacional. Contudo, o funcionamento e a lógica organizacional é bem diferente de um banco relacional. Tentei aplicar a lógica do banco relacional de guardar dados reais relevantes ao escopo, mas a relação entre os fatos ficou bem diferente do que imaginei."
+ - "Aprendi o básico da biblioteca XPCE."
+
+### Fragilidades
+
+- Nosso projeto não possui uma grande quantidade de informações, nossa base é pequena e construída com muito esforço dos colegas, não sendo algo de nível profissional (Uma base adequado para um grande jogo).
+- Não foi feita uma rede semântica forte, apenas relações binárias.
+- Por conta da pequena base e poucas perguntas, muitas vezes não encontra o animal pensado.
+- Adicionar animais pode não funcionar como esperado.
+- Performance um pouco limitada durante a jogabilidade, talvez tornando muito fácil para o programa fazer as análises
+- O jogo ainda não esta conseguindo muito bem filtrar pelos animais, pois apesar de existirem características o suficiente para haver uma diferenciação entre todos os animais presentes no banco, as perguntas não são suficientes para filtrar entre eles.
+
+### Trabalhos Futuros.
+
+- Mais interações com o usuário.
+- Otimização das consultas dentro do prolog. Não consegui fazer algo parecido com os índices do SQL. Talvez melhorar a organização das tabelas e, principalmente, das características dos animais a fim de melhorar a rede semântica.
+- Adição de dinâmica de entidades. Por exemplo, se o Adivinhator não acertou depois de todas as perguntas, o programa salva as características respondidas pelo jogador de maneira que na próxima partida o programa saiba dar a resposta correta. É uma inserção na base de dados.
+- Aumentar a base de perguntas para melhorar a capacidade de encontrar o animal correto.
+- Uma base de dados mais ampla e detalhada, para melhorar a aplicação
+- Perguntas sejam ainda mais precisas e que consigam filtrar entre uma variedade maior de opções. Além disso, penso em ampliar os temas abordados, permitindo que o jogo vá além dos animais e explore outros assuntos, tornando a experiência mais rica e diversificada.
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda sobre fontes de leitura complementares.
+- [Guia de usuário do SWI Prolog](https://www.swi-prolog.org/download/xpce/doc/prolog/userguide.pdf), acesso em 13/12/2024.
+- [Youtube Recommendation](https://github.com/UnBParadigmas2023-2/2023.2_G2_Logico_YouTubeRecommendation), acesso em 13/12/2024.
+- [Documentação Prolog](https://www.swi-prolog.org/pldoc/index.html) acesso em 13/12/2024.
+- [Biblioteca pce no SWI-Prolog](https://www.swi-prolog.org/packages/xpce/) acesso em 13/12/2024.
