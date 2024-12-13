@@ -38,7 +38,8 @@ A estrutura do sistema é baseada em uma interface gráfica que facilita a inter
 Este projeto é aberto a sugestões e contribuições. Sinta-se à vontade para contribuir com melhorias, adicionar novos recursos ou simplesmente compartilhar feedback.
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+
+![Gif do projeto em funcionamento](./imagens/adivinhator_funcionando.gif)
 
 ## Instalação 
 
