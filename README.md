@@ -32,7 +32,13 @@ A estrutura do sistema é baseada em uma interface gráfica que facilita a inter
 
 ## Screenshots
 
+O primeiro vído mostra o projeto acertando o animal pensado
+
 ![Gif do projeto em funcionamento](./imagens/adivinhator_funcionando.gif)
+
+Já o segundo vídeo, desmontra o que acontece quando o Adivinhator erra. Dando a chance do usuário adicionar o animal em que estava pensando.
+
+![Gif do projeto em funcionamento_2](./imagens/adicionando_animal.gif)
 
 ## Instalação 
 
