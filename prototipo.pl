@@ -1,9 +1,9 @@
 :- consult('new_base_animais').
-:- consult('regras3').
+:- consult('regras').
 
 % Início do jogo
 main :-
-    write('Bem-vindo ao Akinator de Animais!'), nl,
+    write('Bem-vindo ao Adivinhator!'), nl,
     write('Pense em um animal, e eu tentarei adivinhar!'), nl,
     iniciar_jogo.
 
@@ -23,4 +23,13 @@ perguntar_reiniciar :-
     (   Resposta = s
     ->  iniciar_jogo
     ;   write('Obrigado por jogar! Até a próxima!'), nl
+    ).
+
+% Ler entrada válida com validação de opções permitidas
+ler_entrada_valida(Validas, Resposta) :-
+    read(Input),
+    (   member(Input, Validas)
+    ->  Resposta = Input
+    ;   write('Entrada inválida! Tente novamente: '),
+        ler_entrada_valida(Validas, Resposta)
     ).

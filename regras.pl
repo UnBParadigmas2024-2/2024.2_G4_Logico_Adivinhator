@@ -1,120 +1,92 @@
-% Definição de hierarquia de categorias
-e_um(cachorro, mamifero).
-e_um(gato, mamifero).
-e_um(passaro, ave).
-e_um(peixe, animal_aquatico).
-e_um(cavalo, mamifero).
-e_um(cobra, reptil).
-e_um(tartaruga, reptil).
-e_um(elefante, mamifero).
+:- consult('new_base_animais').
 
-e_um(mamifero, vertebrado).
-e_um(ave, vertebrado).
-e_um(reptil, vertebrado).
-e_um(animal_aquatico, vertebrado).
+% Função para encontrar o animal com base nas perguntas
+encontrar_animal(Animal) :-
+    listar_animais(Possiveis),
+    escolher_animal(Possiveis, [], Animal).
 
-e_um(vertebrado, animal).
-e_um(animal, ser_vivo).
+listar_animais(Animais) :-
+    findall(A, caracteristicas_animal(A, _), Animais).
+    
+% Caso base: uma lista vazia significa que nenhum animal foi encontrado
+escolher_animal([], _, desconhecido) :- 
+    write('Não consegui identificar o animal com as informações fornecidas.'), nl.
 
-% Propriedades
-possui(mamifero, sangue_quente).
-possui(ave, sangue_quente).
-possui(reptil, sangue_frio).
-possui(animal_aquatico, guelras).
+% Caso base: se sobrar apenas um animal, ele é selecionado
+escolher_animal([Animal], _, Animal) :- 
+    format('O animal identificado é: ~w.~n', [Animal]).
 
-possui(cachorro, late).
-possui(cachorro, domestico).
-possui(gato, mia).
-possui(gato, domestico).
-possui(passaro, voa).
-possui(peixe, nadadeiras).
-possui(peixe, vive_em_agua).
-possui(cavalo, grande).
-possui(cobra, rasteja).
-possui(cobra, carnivoro).
-possui(tartaruga, casco).
-possui(elefante, grande).
-possui(elefante, tromba).
+% Caso geral: continuar perguntando
+escolher_animal(Possiveis, JaPerguntadas, Animal) :-
+    escolher_caracteristica(Possiveis, JaPerguntadas, Caracteristica, _),
+    perguntar(Caracteristica, Resposta),
+    filtrar_animais(Possiveis, Caracteristica, Resposta, Filtrados),
+    escolher_animal(Filtrados, [Caracteristica | JaPerguntadas], Animal).
 
-% Regras para verificar as propriedades
-tem_propriedade(Animal, Propriedade) :-
-    possui(Animal, Propriedade).
-tem_propriedade(Animal, Propriedade) :-
-    e_um(Animal, Categoria),
-    tem_propriedade(Categoria, Propriedade).
-
-% Filtragem por características
-filtrar_animais(Animais, Caracteristica, sim, Filtrados) :-
-    include(tem_caracteristica(Caracteristica), Animais, Filtrados).
-
-filtrar_animais(Animais, Caracteristica, nao, Filtrados) :-
-    exclude(tem_caracteristica(Caracteristica), Animais, Filtrados).
-
-filtrar_animais(Animais, _, nao_sei, Animais).
-
-% Lógica de checagem de características
-tem_caracteristica(Caracteristica, Animal) :-
-    tem_propriedade(Animal, Caracteristica).
-tem_caracteristica(Caracteristica, Animal) :-
-    e_um(Animal, Categoria),
-    tem_caracteristica(Caracteristica, Categoria).
-
-% Perguntas e respostas
+% Perguntar ao jogador com validação de entrada
 perguntar(Caracteristica, Resposta) :-
-    format('O animal possui a seguinte característica: ~w? (sim/nao/nao_sei) ', [Caracteristica]),
-    read(Entrada),
-    ( interpretar_resposta(Entrada, Resposta) ->
-        true
-    ;   write('Resposta inválida. Tente novamente com "sim", "nao" ou "nao_sei".'), nl,
-        perguntar(Caracteristica, Resposta)
+    format('O animal possui a seguinte característica: ~w? (sim/nao/nao_sei): ', [Caracteristica]),
+    validar_entrada(['sim', 'nao', 'nao_sei'], Resposta).
+
+% Ler entrada válida com validação de opções permitidas
+validar_entrada(Validas, Resposta) :-
+    read(Input),
+    (   member(Input, Validas)
+    ->  Resposta = Input
+    ;   write('Entrada inválida! Tente novamente (sim/nao/nao_sei): '),
+        validar_entrada(Validas, Resposta)
     ).
 
 interpretar_resposta(sim, sim).
 interpretar_resposta(nao, nao).
 interpretar_resposta(nao_sei, nao_sei).
 
-% Definição de características por animal
-caracteristicas_animal(leão, ["diurno", "carnívoro", "savana", "não_voa", "grande", "garras", "caçador"]).
-caracteristicas_animal(tigre, ["noturno", "carnívoro", "floresta", "não_voa", "listras", "grande", "caçador"]).
-caracteristicas_animal(macaco, ["diurno", "onívoro", "floresta", "não_voa", "pequeno", "brincalhão", "polegar opositor"]).
+% Filtrar animais com base na resposta
+filtrar_animais(Animais, Caracteristica, sim, Filtrados) :-
+    include(tem_caracteristica(Caracteristica), Animais, Filtrados).
+filtrar_animais(Animais, Caracteristica, nao, Filtrados) :-
+    exclude(tem_caracteristica(Caracteristica), Animais, Filtrados).
+filtrar_animais(Animais, _, nao_sei, Animais).
 
-% ... (Outras características de animais podem ser adicionadas aqui)
-
-% Função principal para iniciar o jogo
-jogar :-
-    write('Pense em um animal, e eu tentarei adivinhar.'), nl,
-    encontrar_animal(Animal),
-    !,
-    format('O animal que você pensou é: ~w!', [Animal]), nl.
-
-jogar :-
-    write('Não consegui adivinhar o animal. Você venceu!'), nl.
-
-% Encontra o animal baseado nas perguntas
-encontrar_animal(Animal) :-
-    listar_animais(Possiveis),
-    escolher_animal(Possiveis, [], Animal).
-
-listar_animais(Animais) :-
-    findall(A, e_um(A, _), Animais).
-
-escolher_animal([Animal], _, Animal) :- !.
-escolher_animal([], _, _) :- fail.
-escolher_animal(Possiveis, JaPerguntadas, Animal) :-
-    escolher_caracteristica(Possiveis, JaPerguntadas, Caracteristica),
-    perguntar(Caracteristica, Resposta),
-    filtrar_animais(Possiveis, Caracteristica, Resposta, Filtrados),
-    escolher_animal(Filtrados, [Caracteristica | JaPerguntadas], Animal).
-
-% Escolher a próxima característica a ser perguntada
-escolher_caracteristica(Animais, JaPerguntadas, Caracteristica) :-
-    findall(C, (member(A, Animais), tem_propriedade(A, C)), Caracteristicas),
-    msort(Caracteristicas, CaracteristicasOrdenadas),
-    list_to_set(CaracteristicasOrdenadas, CaracteristicasUnicas),
+% Escolher a próxima característica com maior entropia
+escolher_caracteristica(Animais, JaPerguntadas, MelhorCaracteristica, MelhorEntropia) :-
+    findall(Caracteristica, 
+            (member(A, Animais), caracteristicas_animal(A, Caracteristicas), member(Caracteristica, Caracteristicas)), 
+            TodasCaracteristicas),
+    list_to_set(TodasCaracteristicas, CaracteristicasUnicas),
     subtract(CaracteristicasUnicas, JaPerguntadas, CaracteristicasNaoPerguntadas),
-    embaralhar(CaracteristicasNaoPerguntadas, CaracteristicasEmbaralhadas),
-    member(Caracteristica, CaracteristicasEmbaralhadas).
+    embaralhar(CaracteristicasNaoPerguntadas, CaracteristicasEmbaralhadas), % Embaralha as características disponíveis
+    maplist(calcular_entropia(Animais), CaracteristicasEmbaralhadas, Entropias),
+    pairs_keys_values(Pares, Entropias, CaracteristicasEmbaralhadas),
+    keysort(Pares, Ordenadas),
+    reverse(Ordenadas, OrdenadasDescendente),  % Inverter a ordem para priorizar as características com maior entropia
+    OrdenadasDescendente = [MelhorEntropia-MelhorCaracteristica | _].
 
-% Embaralhamento de lista para evitar repetição de perguntas
+% Embaralhamento de lista
 embaralhar(Lista, Embaralhada) :-
     random_permutation(Lista, Embaralhada).
+
+% Calcular entropia para uma característica
+calcular_entropia(Animais, Caracteristica, Entropia) :-
+    incluir_caracteristica(Animais, Caracteristica, Positivos),
+    length(Positivos, PositivoCount),
+    excluir_caracteristica(Animais, Caracteristica, Negativos),
+    length(Negativos, NegativoCount),
+    length(Animais, Total),
+    PositivoProb is PositivoCount / Total,
+    NegativoProb is NegativoCount / Total,
+    ( PositivoProb > 0 -> PositivoEntropy is -PositivoProb * log(PositivoProb) ; PositivoEntropy is 0 ),
+    ( NegativoProb > 0 -> NegativoEntropy is -NegativoProb * log(NegativoProb) ; NegativoEntropy is 0 ),
+    Entropia is PositivoEntropy + NegativoEntropy.
+
+% Funções auxiliares para filtrar animais
+incluir_caracteristica(Animais, Caracteristica, Positivos) :-
+    include(tem_caracteristica(Caracteristica), Animais, Positivos).
+
+excluir_caracteristica(Animais, Caracteristica, Negativos) :-
+    exclude(tem_caracteristica(Caracteristica), Animais, Negativos).
+
+% Verifica se o animal possui a característica
+tem_caracteristica(Caracteristica, Animal) :-
+    caracteristicas_animal(Animal, Caracteristicas),
+    member(Caracteristica, Caracteristicas).
