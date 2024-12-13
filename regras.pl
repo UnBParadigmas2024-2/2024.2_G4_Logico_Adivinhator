@@ -6,7 +6,7 @@ encontrar_animal(Animal) :-
     escolher_animal(Possiveis, [], Animal).
 
 listar_animais(Animais) :-
-    findall(A, caracteristicas_animal(A, _), Animais).
+    findall(A, caracteristicas_animal_old(A, _), Animais).
     
 % Caso base: uma lista vazia significa que nenhum animal foi encontrado
 escolher_animal([], _, desconhecido) :- 
@@ -51,7 +51,7 @@ filtrar_animais(Animais, _, nao_sei, Animais).
 % Escolher a próxima característica com maior entropia
 escolher_caracteristica(Animais, JaPerguntadas, MelhorCaracteristica, MelhorEntropia) :-
     findall(Caracteristica, 
-            (member(A, Animais), caracteristicas_animal(A, Caracteristicas), member(Caracteristica, Caracteristicas)), 
+            (member(A, Animais), caracteristicas_animal_old(A, Caracteristicas), member(Caracteristica, Caracteristicas)), 
             TodasCaracteristicas),
     list_to_set(TodasCaracteristicas, CaracteristicasUnicas),
     subtract(CaracteristicasUnicas, JaPerguntadas, CaracteristicasNaoPerguntadas),
@@ -88,5 +88,5 @@ excluir_caracteristica(Animais, Caracteristica, Negativos) :-
 
 % Verifica se o animal possui a característica
 tem_caracteristica(Caracteristica, Animal) :-
-    caracteristicas_animal(Animal, Caracteristicas),
+    caracteristicas_animal_old(Animal, Caracteristicas),
     member(Caracteristica, Caracteristicas).

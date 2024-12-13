@@ -100,107 +100,107 @@ caracteristicas(equinos, ["pescoço longo", "tem crina", "pode ser montado"]).
 % Características dos animais com formato padronizado (e agrupados por semelhanças):
 % [atividade (noturno/diurno), dieta (carnívoro/herbívoro/onívoro), bioma principal, locomoção (voa/não_voa), característica específica 1, característica específica 2, característica específica 3]
 
-caracteristicas_animal(leão, ["diurno", "carnívoro", "savana", "não_voa", "grande", "garras", "caçador"]).
-caracteristicas_animal(tigre, ["noturno", "carnívoro", "floresta", "não_voa", "listras", "grande", "caçador"]).
-caracteristicas_animal(pantera, ["noturno", "carnívoro", "floresta", "não_voa", "preta", "grande", "caçador"]).
-caracteristicas_animal(cheetah, ["diurno", "carnívoro", "savana", "não_voa", "rápido", "manchas", "caçador"]).
-caracteristicas_animal(lince, ["diurno", "carnívoro", "florestas temperadas", "não_voa", "patas longas", "orelhas pontudas", "caçador"]).
-caracteristicas_animal(gato, ["noturno", "carnívoro", "áreas urbanas", "não_voa", "domesticado", "independente", "arranha"]).
+caracteristicas_animal_old(leão, ["diurno", "carnívoro", "savana", "não_voa", "grande", "garras", "caçador"]).
+caracteristicas_animal_old(tigre, ["noturno", "carnívoro", "floresta", "não_voa", "listras", "grande", "caçador"]).
+caracteristicas_animal_old(pantera, ["noturno", "carnívoro", "floresta", "não_voa", "preta", "grande", "caçador"]).
+caracteristicas_animal_old(cheetah, ["diurno", "carnívoro", "savana", "não_voa", "rápido", "manchas", "caçador"]).
+caracteristicas_animal_old(lince, ["diurno", "carnívoro", "florestas temperadas", "não_voa", "patas longas", "orelhas pontudas", "caçador"]).
+caracteristicas_animal_old(gato, ["noturno", "carnívoro", "áreas urbanas", "não_voa", "domesticado", "independente", "arranha"]).
 
-caracteristicas_animal(cachorro, ["diurno", "onívoro", "áreas urbanas", "não_voa", "late", "sociável", "fiel"]).
-caracteristicas_animal(lobo, ["noturno", "carnívoro", "floresta", "não_voa", "grande", "vive em alcateias", "caçador"]).
-caracteristicas_animal(raposa, ["noturno", "onívoro", "florestas", "não_voa", "astuta", "pequena", "solitária"]).
-caracteristicas_animal(hiena, ["noturno", "carnívoro", "savana", "não_voa", "risada", "vive em clãs", "caçador e catador"]).
-caracteristicas_animal(chacal, ["noturno", "onívoro", "savana", "não_voa", "astuto", "sociável", "caçador e catador"]).
+caracteristicas_animal_old(cachorro, ["diurno", "onívoro", "áreas urbanas", "não_voa", "late", "sociável", "fiel"]).
+caracteristicas_animal_old(lobo, ["noturno", "carnívoro", "floresta", "não_voa", "grande", "vive em alcateias", "caçador"]).
+caracteristicas_animal_old(raposa, ["noturno", "onívoro", "florestas", "não_voa", "astuta", "pequena", "solitária"]).
+caracteristicas_animal_old(hiena, ["noturno", "carnívoro", "savana", "não_voa", "risada", "vive em clãs", "caçador e catador"]).
+caracteristicas_animal_old(chacal, ["noturno", "onívoro", "savana", "não_voa", "astuto", "sociável", "caçador e catador"]).
 
-caracteristicas_animal(macaco, ["diurno", "onívoro", "floresta", "não_voa", "pequeno", "brincalhão", "polegar opositor"]).
-caracteristicas_animal(chimpanzé, ["diurno", "onívoro", "floresta", "não_voa", "grande", "inteligente", "usa ferramentas"]).
-caracteristicas_animal(gorila, ["diurno", "herbívoro", "floresta", "não_voa", "grande", "forte", "sociável"]).
-caracteristicas_animal(orangotango, ["diurno", "frugívoro", "florestas tropicais", "não_voa", "braços longos", "inteligente", "cor comumente laranja"]).
-caracteristicas_animal(babuíno, ["diurno", "onívoro", "savana", "não_voa", "focinho longo", "briga", "inteligente"]).
+caracteristicas_animal_old(macaco, ["diurno", "onívoro", "floresta", "não_voa", "pequeno", "brincalhão", "polegar opositor"]).
+caracteristicas_animal_old(chimpanzé, ["diurno", "onívoro", "floresta", "não_voa", "grande", "inteligente", "usa ferramentas"]).
+caracteristicas_animal_old(gorila, ["diurno", "herbívoro", "floresta", "não_voa", "grande", "forte", "sociável"]).
+caracteristicas_animal_old(orangotango, ["diurno", "frugívoro", "florestas tropicais", "não_voa", "braços longos", "inteligente", "cor comumente laranja"]).
+caracteristicas_animal_old(babuíno, ["diurno", "onívoro", "savana", "não_voa", "focinho longo", "briga", "inteligente"]).
 
-caracteristicas_animal(águia, ["diurno", "carnívoro", "montanhas", "voa", "garras", "visão aguçada", "caçador"]).
-caracteristicas_animal(falcão, ["diurno", "carnívoro", "campos abertos", "voa", "garras", "veloz", "caçador"]).
-caracteristicas_animal(coruja, ["noturno", "carnívoro", "floresta", "voa", "garras afiadas", "visão noturna", "silenciosa"]).
-caracteristicas_animal(pardal, ["diurno", "onívoro", "áreas urbanas", "voa", "pequeno", "sociável", "se alimenta de sementes"]).
-caracteristicas_animal(andorinha, ["diurno", "insetívoro", "campos", "voa", "pequeno", "migratória", "rápido"]).
-caracteristicas_animal(pombo, ["diurno", "onívoro", "áreas urbanas", "voa", "sociável", "orientação magnética", "vive em grandes grupos"]).
-caracteristicas_animal(papagaio, ["diurno", "herbívoro", "florestas", "voa", "colorido", "imitador", "sociável"]).
-caracteristicas_animal(periquito, ["diurno", "herbívoro", "florestas", "voa", "colorido", "pequeno", "vocaliza bastante"]).
-caracteristicas_animal(tucano, ["diurno", "frugívoro", "floresta tropical", "voa", "bico grande", "colorido", "social"]).
+caracteristicas_animal_old(águia, ["diurno", "carnívoro", "montanhas", "voa", "garras", "visão aguçada", "caçador"]).
+caracteristicas_animal_old(falcão, ["diurno", "carnívoro", "campos abertos", "voa", "garras", "veloz", "caçador"]).
+caracteristicas_animal_old(coruja, ["noturno", "carnívoro", "floresta", "voa", "garras afiadas", "visão noturna", "silenciosa"]).
+caracteristicas_animal_old(pardal, ["diurno", "onívoro", "áreas urbanas", "voa", "pequeno", "sociável", "se alimenta de sementes"]).
+caracteristicas_animal_old(andorinha, ["diurno", "insetívoro", "campos", "voa", "pequeno", "migratória", "rápido"]).
+caracteristicas_animal_old(pombo, ["diurno", "onívoro", "áreas urbanas", "voa", "sociável", "orientação magnética", "vive em grandes grupos"]).
+caracteristicas_animal_old(papagaio, ["diurno", "herbívoro", "florestas", "voa", "colorido", "imitador", "sociável"]).
+caracteristicas_animal_old(periquito, ["diurno", "herbívoro", "florestas", "voa", "colorido", "pequeno", "vocaliza bastante"]).
+caracteristicas_animal_old(tucano, ["diurno", "frugívoro", "floresta tropical", "voa", "bico grande", "colorido", "social"]).
 
-caracteristicas_animal(cobra, ["noturno", "carnívoro", "floresta", "não_voa", "escamas", "silenciosa", "pode ser venenosa"]).
-caracteristicas_animal(lagarto, ["diurno", "onívoro", "caatinga", "não_voa", "escamas", "rápido", "troca de pele"]).
-caracteristicas_animal(jacaré, ["diurno", "carnívoro", "pantanal", "não_voa", "muitos dentes", "nada", "predador"]).
-caracteristicas_animal(jiboia, ["noturno", "carnívoro", "florestas", "não_voa", "comprida", "não é venenosa", "silenciosa"]).
-caracteristicas_animal(iguana, ["diurno", "herbívoro", "florestas", "não_voa", "escamas", "rabo longo", "escaladora"]).
+caracteristicas_animal_old(cobra, ["noturno", "carnívoro", "floresta", "não_voa", "escamas", "silenciosa", "pode ser venenosa"]).
+caracteristicas_animal_old(lagarto, ["diurno", "onívoro", "caatinga", "não_voa", "escamas", "rápido", "troca de pele"]).
+caracteristicas_animal_old(jacaré, ["diurno", "carnívoro", "pantanal", "não_voa", "muitos dentes", "nada", "predador"]).
+caracteristicas_animal_old(jiboia, ["noturno", "carnívoro", "florestas", "não_voa", "comprida", "não é venenosa", "silenciosa"]).
+caracteristicas_animal_old(iguana, ["diurno", "herbívoro", "florestas", "não_voa", "escamas", "rabo longo", "escaladora"]).
 
-caracteristicas_animal(besouro, ["diurno", "herbívoro", "floresta", "voa", "pequeno", "exoesqueleto rígido", "corpo compacto"]).
-caracteristicas_animal(joaninha, ["diurno", "insetívoro", "floresta", "voa", "pequeno", "vermelha com pintas", "come pulgões"]).
-caracteristicas_animal(formiga, ["diurno", "onívoro", "florestas", "não_voa", "pequena", "trabalhadora", "vive em colônias"]).
-caracteristicas_animal(cupim, ["diurno", "herbívoro", "florestas", "não_voa", "vive em colônias", "constrói ninhos", "inseto"]).
-caracteristicas_animal(grilo, ["noturno", "herbívoro", "campos", "não_voa", "emite sons", "pequeno", "salta"]).
-caracteristicas_animal(cigarra, ["diurno", "herbívoro", "florestas", "voa", "emite sons", "ciclo de vida longo", "inseto"]).
-caracteristicas_animal(barata, ["noturno", "onívoro", "áreas urbanas", "não_voa", "resistente", "vive em grupos", "pequena"]).
-caracteristicas_animal(libélula, ["diurno", "carnívoro", "pântanos", "voa", "asas transparentes", "rápido", "caçador de insetos"]).
-caracteristicas_animal(formiga_cortadeira, ["diurno", "herbívoro", "florestas", "não_voa", "trabalhadora", "corta folhas", "vive em colônias"]).
-caracteristicas_animal(escaravelho, ["diurno", "herbívoro", "floresta", "voa", "grande", "coleóptero", "excava"]).
-caracteristicas_animal(borboleta, ["diurno", "herbívoro", "campos", "voa", "colorida", "asas escamosas", "se alimenta de néctar"]).
-caracteristicas_animal(mariposa, ["noturno", "herbívoro", "floresta", "voa", "peluda", "atraída por luz", "noturna"]).
-caracteristicas_animal(borboleta_monarca, ["diurno", "herbívoro", "campos", "voa", "colorida", "migratória", "asa escamosa"]).
-caracteristicas_animal(abelha, ["diurno", "onívoro", "floresta", "voa", "pequena", "produz mel", "vive em colmeias"]).
-caracteristicas_animal(vespa, ["diurno", "carnívoro", "floresta", "voa", "agressiva", "veneno forte", "constrói ninhos"]).
-caracteristicas_animal(aranha, ["noturno", "carnívoro", "diversos biomas", "não_voa", "oito patas", "produz teias", "pequena"]).
-caracteristicas_animal(escorpião, ["noturno", "carnívoro", "deserto", "não_voa", "oito patas", "ferrão venenoso", "pequeno"]).
+caracteristicas_animal_old(besouro, ["diurno", "herbívoro", "floresta", "voa", "pequeno", "exoesqueleto rígido", "corpo compacto"]).
+caracteristicas_animal_old(joaninha, ["diurno", "insetívoro", "floresta", "voa", "pequeno", "vermelha com pintas", "come pulgões"]).
+caracteristicas_animal_old(formiga, ["diurno", "onívoro", "florestas", "não_voa", "pequena", "trabalhadora", "vive em colônias"]).
+caracteristicas_animal_old(cupim, ["diurno", "herbívoro", "florestas", "não_voa", "vive em colônias", "constrói ninhos", "inseto"]).
+caracteristicas_animal_old(grilo, ["noturno", "herbívoro", "campos", "não_voa", "emite sons", "pequeno", "salta"]).
+caracteristicas_animal_old(cigarra, ["diurno", "herbívoro", "florestas", "voa", "emite sons", "ciclo de vida longo", "inseto"]).
+caracteristicas_animal_old(barata, ["noturno", "onívoro", "áreas urbanas", "não_voa", "resistente", "vive em grupos", "pequena"]).
+caracteristicas_animal_old(libélula, ["diurno", "carnívoro", "pântanos", "voa", "asas transparentes", "rápido", "caçador de insetos"]).
+caracteristicas_animal_old(formiga_cortadeira, ["diurno", "herbívoro", "florestas", "não_voa", "trabalhadora", "corta folhas", "vive em colônias"]).
+caracteristicas_animal_old(escaravelho, ["diurno", "herbívoro", "floresta", "voa", "grande", "coleóptero", "excava"]).
+caracteristicas_animal_old(borboleta, ["diurno", "herbívoro", "campos", "voa", "colorida", "asas escamosas", "se alimenta de néctar"]).
+caracteristicas_animal_old(mariposa, ["noturno", "herbívoro", "floresta", "voa", "peluda", "atraída por luz", "noturna"]).
+caracteristicas_animal_old(borboleta_monarca, ["diurno", "herbívoro", "campos", "voa", "colorida", "migratória", "asa escamosa"]).
+caracteristicas_animal_old(abelha, ["diurno", "onívoro", "floresta", "voa", "pequena", "produz mel", "vive em colmeias"]).
+caracteristicas_animal_old(vespa, ["diurno", "carnívoro", "floresta", "voa", "agressiva", "veneno forte", "constrói ninhos"]).
+caracteristicas_animal_old(aranha, ["noturno", "carnívoro", "diversos biomas", "não_voa", "oito patas", "produz teias", "pequena"]).
+caracteristicas_animal_old(escorpião, ["noturno", "carnívoro", "deserto", "não_voa", "oito patas", "ferrão venenoso", "pequeno"]).
 
-caracteristicas_animal(rã, ["diurno", "onívoro", "pântanos", "não_voa", "pele úmida", "salta", "anfíbio"]).
-caracteristicas_animal(salamandra, ["diurno", "onívoro", "floresta", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
-caracteristicas_animal(salamandra_tigre, ["noturno", "carnívoro", "florestas temperadas", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
-caracteristicas_animal(sapo, ["noturno", "insetívoro", "pântanos", "não_voa", "selvagem", "saltador", "pele_úmida"]).
+caracteristicas_animal_old(rã, ["diurno", "onívoro", "pântanos", "não_voa", "pele úmida", "salta", "anfíbio"]).
+caracteristicas_animal_old(salamandra, ["diurno", "onívoro", "floresta", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
+caracteristicas_animal_old(salamandra_tigre, ["noturno", "carnívoro", "florestas temperadas", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
+caracteristicas_animal_old(sapo, ["noturno", "insetívoro", "pântanos", "não_voa", "selvagem", "saltador", "pele_úmida"]).
 
-caracteristicas_animal(caracol, ["diurno", "herbívoro", "jardins", "não_voa", "tem concha", "lento", "ambientes húmidos"]).
-caracteristicas_animal(lesma, ["noturno", "herbívoro", "floresta", "não_voa", "sem concha", "lento", "se movimenta com muco"]).
+caracteristicas_animal_old(caracol, ["diurno", "herbívoro", "jardins", "não_voa", "tem concha", "lento", "ambientes húmidos"]).
+caracteristicas_animal_old(lesma, ["noturno", "herbívoro", "floresta", "não_voa", "sem concha", "lento", "se movimenta com muco"]).
 
-caracteristicas_animal(camarão, ["diurno", "onívoro", "mar", "não_voa", "dez patas", "corpo segmentado", "vive em cardumes"]).
-caracteristicas_animal(caranguejo, ["diurno", "onívoro", "praias", "não_voa", "dez patas", "carapaça dura", "pinças"]).
-caracteristicas_animal(lagosta, ["diurno", "onívoro", "mar", "não_voa", "exoesqueleto", "garras", "vive em recifes"]).
-caracteristicas_animal(salmão, ["diurno", "onívoro", "rios", "não_voa", "escamas", "migratório", "vive em cardumes"]).
-caracteristicas_animal(polvo, ["noturno", "carnívoro", "mar", "não_voa", "tentáculos", "inteligente", "muda de cor"]).
-caracteristicas_animal(polvo_azul, ["noturno", "carnívoro", "mares tropicais", "não_voa", "tentáculos", "muda de cor", "veneno forte"]).
-caracteristicas_animal(tubarão, ["diurno", "carnívoro", "mar", "não_voa", "nadadeiras fortes", "cartilaginoso", "predador"]).
-caracteristicas_animal(água_viva, ["noturno", "carnívoro", "mar", "não_voa", "corpo translúcido", "tentáculos urticantes", "gelatinoso"]).
-caracteristicas_animal(coral, ["diurno", "herbívoro", "mar", "não_voa", "fixo", "colorido", "vive em colônias"]).
-caracteristicas_animal(anêmona, ["diurno", "carnívoro", "mar", "não_voa", "colorida", "tentáculos", "fixa"]).
-caracteristicas_animal(náutilo, ["noturno", "carnívoro", "mar", "não_voa", "concha espiralada", "flutua", "tentáculos"]).
-caracteristicas_animal(ouriço_do_mar, ["noturno", "herbívoro", "mar", "não_voa", "espinhos", "vive no fundo", "lento"]).
-caracteristicas_animal(estrela_do_mar, ["diurno", "carnívoro", "mar", "não_voa", "regenera membros", "simetria radial", "vive no fundo"]).
-caracteristicas_animal(porquinho_do_mar, ["diurno", "herbívoro", "mares", "não_voa", "pequeno", "vive no fundo", "espinhos curtos"]).
-caracteristicas_animal(truta, ["diurno", "carnívoro", "rios", "não_voa", "vive em água doce", "nadadora", "escamas coloridas"]).
-caracteristicas_animal(lula_gigante, ["noturno", "carnívoro", "mares profundos", "não_voa", "tentáculos longos", "grande", "inteligente"]).
-caracteristicas_animal(caramujo_gigante, ["diurno", "herbívoro", "florestas", "não_voa", "concha grande", "lento", "vive em ambientes úmidos"]).
-caracteristicas_animal(peixe_palhaço, ["diurno", "onívoro", "recifes de corais", "não_voa", "colorido", "vive em anêmonas", "pequeno"]).
-caracteristicas_animal(cavalo_marinho, ["diurno", "carnívoro", "mares tropicais", "não_voa", "corpo curvado", "pequeno", "vive em recifes"]).
-caracteristicas_animal(pinguim, ["diurno", "carnívoro", "antártica", "não_voa", "nadador", "vive em colônias", "plumagem densa"]).
-caracteristicas_animal(ostra, ["noturno", "filtrador", "mar", "não_voa", "duas conchas", "vive fixo", "produz pérolas"]).
-caracteristicas_animal(tritão, ["noturno", "carnívoro", "pântanos", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
-caracteristicas_animal(bagre, ["noturno", "onívoro", "rios", "não_voa", "bigodes", "escamas lisas", "vive no fundo"]).
-caracteristicas_animal(tainha, ["diurno", "onívoro", "mares tropicais", "não_voa", "pequena", "vive em cardumes", "nadadora"]).
-caracteristicas_animal(tartaruga, ["diurno", "herbívoro", "áreas costeiras", "não_voa", "mordida forte", "tem grande casco", "lenta"]).
-caracteristicas_animal(baleia, ["diurno", "carnívoro", "mar", "não_voa", "selvagem", "gigante", "pesa toneladas"]).
-caracteristicas_animal(orca, ["diurno", "carnívoro", "mar", "não_voa", "selvagem", "predador", "cor preto e branco"]).
-caracteristicas_animal(golfinho, ["diurno", "carnívoro", "mar", "não_voa", "amigável", "inteligente", "salta da água"]).
+caracteristicas_animal_old(camarão, ["diurno", "onívoro", "mar", "não_voa", "dez patas", "corpo segmentado", "vive em cardumes"]).
+caracteristicas_animal_old(caranguejo, ["diurno", "onívoro", "praias", "não_voa", "dez patas", "carapaça dura", "pinças"]).
+caracteristicas_animal_old(lagosta, ["diurno", "onívoro", "mar", "não_voa", "exoesqueleto", "garras", "vive em recifes"]).
+caracteristicas_animal_old(salmão, ["diurno", "onívoro", "rios", "não_voa", "escamas", "migratório", "vive em cardumes"]).
+caracteristicas_animal_old(polvo, ["noturno", "carnívoro", "mar", "não_voa", "tentáculos", "inteligente", "muda de cor"]).
+caracteristicas_animal_old(polvo_azul, ["noturno", "carnívoro", "mares tropicais", "não_voa", "tentáculos", "muda de cor", "veneno forte"]).
+caracteristicas_animal_old(tubarão, ["diurno", "carnívoro", "mar", "não_voa", "nadadeiras fortes", "cartilaginoso", "predador"]).
+caracteristicas_animal_old(água_viva, ["noturno", "carnívoro", "mar", "não_voa", "corpo translúcido", "tentáculos urticantes", "gelatinoso"]).
+caracteristicas_animal_old(coral, ["diurno", "herbívoro", "mar", "não_voa", "fixo", "colorido", "vive em colônias"]).
+caracteristicas_animal_old(anêmona, ["diurno", "carnívoro", "mar", "não_voa", "colorida", "tentáculos", "fixa"]).
+caracteristicas_animal_old(náutilo, ["noturno", "carnívoro", "mar", "não_voa", "concha espiralada", "flutua", "tentáculos"]).
+caracteristicas_animal_old(ouriço_do_mar, ["noturno", "herbívoro", "mar", "não_voa", "espinhos", "vive no fundo", "lento"]).
+caracteristicas_animal_old(estrela_do_mar, ["diurno", "carnívoro", "mar", "não_voa", "regenera membros", "simetria radial", "vive no fundo"]).
+caracteristicas_animal_old(porquinho_do_mar, ["diurno", "herbívoro", "mares", "não_voa", "pequeno", "vive no fundo", "espinhos curtos"]).
+caracteristicas_animal_old(truta, ["diurno", "carnívoro", "rios", "não_voa", "vive em água doce", "nadadora", "escamas coloridas"]).
+caracteristicas_animal_old(lula_gigante, ["noturno", "carnívoro", "mares profundos", "não_voa", "tentáculos longos", "grande", "inteligente"]).
+caracteristicas_animal_old(caramujo_gigante, ["diurno", "herbívoro", "florestas", "não_voa", "concha grande", "lento", "vive em ambientes úmidos"]).
+caracteristicas_animal_old(peixe_palhaço, ["diurno", "onívoro", "recifes de corais", "não_voa", "colorido", "vive em anêmonas", "pequeno"]).
+caracteristicas_animal_old(cavalo_marinho, ["diurno", "carnívoro", "mares tropicais", "não_voa", "corpo curvado", "pequeno", "vive em recifes"]).
+caracteristicas_animal_old(pinguim, ["diurno", "carnívoro", "antártica", "não_voa", "nadador", "vive em colônias", "plumagem densa"]).
+caracteristicas_animal_old(ostra, ["noturno", "filtrador", "mar", "não_voa", "duas conchas", "vive fixo", "produz pérolas"]).
+caracteristicas_animal_old(tritão, ["noturno", "carnívoro", "pântanos", "não_voa", "pele úmida", "regenera membros", "anfíbio"]).
+caracteristicas_animal_old(bagre, ["noturno", "onívoro", "rios", "não_voa", "bigodes", "escamas lisas", "vive no fundo"]).
+caracteristicas_animal_old(tainha, ["diurno", "onívoro", "mares tropicais", "não_voa", "pequena", "vive em cardumes", "nadadora"]).
+caracteristicas_animal_old(tartaruga, ["diurno", "herbívoro", "áreas costeiras", "não_voa", "mordida forte", "tem grande casco", "lenta"]).
+caracteristicas_animal_old(baleia, ["diurno", "carnívoro", "mar", "não_voa", "selvagem", "gigante", "pesa toneladas"]).
+caracteristicas_animal_old(orca, ["diurno", "carnívoro", "mar", "não_voa", "selvagem", "predador", "cor preto e branco"]).
+caracteristicas_animal_old(golfinho, ["diurno", "carnívoro", "mar", "não_voa", "amigável", "inteligente", "salta da água"]).
 
-caracteristicas_animal(estrela_coberta, ["diurno", "carnívoro", "mares profundos", "não_voa", "simetria radial", "espinhos pequenos", "lento"]).
-caracteristicas_animal(centopeia, ["noturno", "carnívoro", "florestas", "não_voa", "múltiplas pernas", "rápido", "veneno"]).
+caracteristicas_animal_old(estrela_coberta, ["diurno", "carnívoro", "mares profundos", "não_voa", "simetria radial", "espinhos pequenos", "lento"]).
+caracteristicas_animal_old(centopeia, ["noturno", "carnívoro", "florestas", "não_voa", "múltiplas pernas", "rápido", "veneno"]).
 
-caracteristicas_animal(cavalo, ["diurno", "herbívoro", "pradarias", "não_voa", "domesticado", "veloz", "forte"]).
-caracteristicas_animal(zebra, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "listrada", "anda em bando"]).
-caracteristicas_animal(rinoceronte, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "tem chifre", "grande"]).
+caracteristicas_animal_old(cavalo, ["diurno", "herbívoro", "pradarias", "não_voa", "domesticado", "veloz", "forte"]).
+caracteristicas_animal_old(zebra, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "listrada", "anda em bando"]).
+caracteristicas_animal_old(rinoceronte, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "tem chifre", "grande"]).
 
-caracteristicas_animal(elefante, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "tem tromba", "inteligente"]).
+caracteristicas_animal_old(elefante, ["diurno", "herbívoro", "savana", "não_voa", "selvagem", "tem tromba", "inteligente"]).
 
-caracteristicas_animal(urso, ["diurno", "onívoro", "florestas", "não_voa", "selvagem", "forte", "costuma hibernar"]).
-caracteristicas_animal(urso_polar, ["diurno", "carnívoro", "áreas árticas", "não_voa", "selvagem", "forte", "pelagem_branca"]).
+caracteristicas_animal_old(urso, ["diurno", "onívoro", "florestas", "não_voa", "selvagem", "forte", "costuma hibernar"]).
+caracteristicas_animal_old(urso_polar, ["diurno", "carnívoro", "áreas árticas", "não_voa", "selvagem", "forte", "pelagem_branca"]).
 
 
 % Animais específicos
@@ -304,6 +304,6 @@ tem_propriedade(Animal, Propriedade) :-
 
 tem_propriedade(Animal, Propriedade) :-
     % Busca características específicas do animal
-    caracteristicas_animal(Animal, CaracteristicasEspecificas),
+    caracteristicas_animal_old(Animal, CaracteristicasEspecificas),
     member(Propriedade, CaracteristicasEspecificas).
    
