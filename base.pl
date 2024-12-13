@@ -191,4 +191,3 @@ caracteristicas_animal(avestruz, [
     dieta_herbivoro, cobertura_penas, selvagem,
     "corre_rapido", "grande", "não_voa", "vive_em_bando"
 ]).
-
