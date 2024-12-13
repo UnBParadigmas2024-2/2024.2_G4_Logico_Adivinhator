@@ -9,9 +9,8 @@
 
 Em um primeiro momento, após a divisão dos subgrupos, dois integrantes do grupo fizeram separadamente duas versões do que seriam versões candidatas da estrutura principal.
 Após isso, analisou-se a possibilidade de uma integração das duas bases para a formação de uma rede semântica mais forte, o que não se mostrou viável.
-
 Além disso, foi realizada uma discussão acerca de qual seria mais coerente com a proposta do trabalho com os demais integrantes, os quais não estavam no subgrupo.
-Por fim, decidido qual modelo de projeto físico seria utilizado, foi feita a população desta base pelos membros do subgrupo, além da criação de algumas regras.
 
 A base que foi escolhida possuía a seguinte estrutura: Filo, Classe, Ordem, Características da Ordem, Características do Animal e Animal específico.
-Durante a implementação, foram feitas algumas adaptações e mudanças na estrutura.
+Por fim, decidido qual modelo de projeto físico seria utilizado, foi feita a população desta base pelos membros do subgrupo, além da criação de algumas regras.
+Durante a implementação, foram feitas algumas adaptações e mudanças na estrutura do projeto físico.
