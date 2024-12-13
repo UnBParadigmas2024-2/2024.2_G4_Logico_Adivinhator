@@ -19,7 +19,7 @@
 
 ## Sobre 
 
-Este projeto é uma implementação do jogo de adivinhação "Akinator", onde o sistema tenta adivinhar o que o usuário está pensando com base em perguntas. O jogo é desenvolvido em Prolog, utilizando um conjunto de regras de inferência para realizar a interação com o usuário, que deve pensar em um animal e responder às perguntas feitas pelo sistema. A cada resposta, o sistema utiliza essas informações para restringir as opções e tentar adivinhar o animal.
+Este projeto é uma implementação do jogo de adivinhação ["Akinator"](https://pt.akinator.com/), onde o sistema tenta adivinhar o que o usuário está pensando com base em perguntas. O jogo é desenvolvido em [Prolog](https://www.swi-prolog.org/), utilizando um conjunto de regras de inferência para realizar a interação com o usuário, que deve pensar em um animal e responder às perguntas feitas pelo sistema. A cada resposta, o sistema utiliza essas informações para restringir as opções e tentar adivinhar o animal.
 
 A estrutura do sistema é baseada em uma interface gráfica que facilita a interação com o usuário. A interface é construída com a biblioteca pce, que é integrada ao Prolog, permitindo a criação de diálogos e botões interativos. O fluxo do jogo é projetado de forma a guiar o usuário por uma série de perguntas, tentando adivinhar o animal com base nas características informadas.
 
@@ -29,6 +29,17 @@ A estrutura do sistema é baseada em uma interface gráfica que facilita a inter
 - **Perguntas Dinâmicas:** O sistema seleciona perguntas baseadas em características dos animais e no progresso das respostas anteriores. As perguntas são feitas de forma a dividir as opções de maneira eficiente, utilizando as respostas do usuário (sim, não ou não sei) para ajustar as possibilidades.
 - **Inferência e Regras:** O sistema usa regras de inferência para determinar quais perguntas fazer, com base nas características dos animais disponíveis. Ele ajusta as opções de animais possíveis a cada resposta do usuário, aplicando uma lógica de exclusão ou inclusão.
 - **Adição de Novos Animais:** Caso o sistema não consiga adivinhar o animal, ele oferece a opção de adicionar um novo animal à base de dados, incluindo suas características. Isso permite que o jogo aprenda novos animais à medida que é jogado.
+
+### Recursos Adicionais
+
+Para explorar mais sobre Prolog e ferramentas relacionadas:
+
+- [SWI-Prolog Reference Manual](https://www.swi-prolog.org/pldoc/doc_for?object=manual)
+- [Guia do Usuário da Biblioteca XPCE](https://www.swi-prolog.org/download/xpce/doc/prolog/userguide.pdf)
+- [Introdução ao Paradigma Lógico](https://leandromoh.gitbooks.io/tcc-paradigmas-de-programacao/content/6_paradigma_logico/index.html)
+
+Essas referências oferecem uma base sólida para entender o desenvolvimento e o funcionamento deste projeto.
+O reporitório é aberto a sugestões e contribuições. Sinta-se à vontade para contribuir com melhorias, adicionar novos recursos ou simplesmente compartilhar feedback.
 
 ## Screenshots
 
@@ -304,14 +315,18 @@ Relatos de cada um dos colegas:
  - "Aprendi a lidar com a estrutura do que seriam as tabelas (os fatos) de um banco de dados não-relacional. Contudo, o funcionamento e a lógica organizacional é bem diferente de um banco relacional. Tentei aplicar a lógica do banco relacional de guardar dados reais relevantes ao escopo, mas a relação entre os fatos ficou bem diferente do que imaginei."
  - "Aprendi o básico da biblioteca XPCE."
 
-### Fragilidades
+### Contribuições e Fragilidades
+- **Contribuições**
 
-- Nosso projeto não possui uma grande quantidade de informações, nossa base é pequena e construída com muito esforço dos colegas, não sendo algo de nível profissional (Uma base adequado para um grande jogo).
-- Não foi feita uma rede semântica forte, apenas relações binárias.
-- Por conta da pequena base e poucas perguntas, muitas vezes não encontra o animal pensado.
-- Adicionar animais pode não funcionar como esperado.
-- Performance um pouco limitada durante a jogabilidade, talvez tornando muito fácil para o programa fazer as análises
-- O jogo ainda não esta conseguindo muito bem filtrar pelos animais, pois apesar de existirem características o suficiente para haver uma diferenciação entre todos os animais presentes no banco, as perguntas não são suficientes para filtrar entre eles.
+O projeto foi desenvolvido com contribuições significativas da maioria dos membros, abrangendo desde a estruturação e população inicial da base de dados até o desenvolvimento da interface gráfica e funcionalidades avançadas. Foram utilizadas nuances do paradigma lógico, como fatos e regras de inferência, além de recursos como [_dynamic_](https://www.swi-prolog.org/pldoc/man?predicate=dynamic/1) e [_findall_](https://www.swi-prolog.org/pldoc/man?predicate=findall/3), para implementar o sistema. A interface foi projetada para ser intuitiva e eficiente, enquanto a documentação detalhada garantiu clareza no processo de desenvolvimento e integração.
+
+- **Fragilidades**
+   - Nosso projeto não possui uma grande quantidade de informações, nossa base é pequena e construída com muito esforço dos colegas, não sendo algo de nível profissional (Uma base adequado para um grande jogo).
+   - Não foi feita uma rede semântica forte, apenas relações binárias.
+   - Por conta da pequena base e poucas perguntas, muitas vezes não encontra o animal pensado.
+   - Adicionar animais pode não funcionar como esperado.
+   - Performance um pouco limitada durante a jogabilidade, talvez tornando muito fácil para o programa fazer as análises
+   - O jogo ainda não esta conseguindo muito bem filtrar pelos animais, pois apesar de existirem características o suficiente para haver uma diferenciação entre todos os animais presentes no banco, as perguntas não são suficientes para filtrar entre eles.
 
 ### Trabalhos Futuros.
 
@@ -326,4 +341,8 @@ Relatos de cada um dos colegas:
 - [Guia de usuário do SWI Prolog](https://www.swi-prolog.org/download/xpce/doc/prolog/userguide.pdf), acesso em 13/12/2024.
 - [Youtube Recommendation](https://github.com/UnBParadigmas2023-2/2023.2_G2_Logico_YouTubeRecommendation), acesso em 13/12/2024.
 - [Documentação Prolog](https://www.swi-prolog.org/pldoc/index.html) acesso em 13/12/2024.
+- [Jogo Akinator](https://pt.akinator.com/) acesso 12/12/2024.
 - [Biblioteca pce no SWI-Prolog](https://www.swi-prolog.org/packages/xpce/) acesso em 13/12/2024.
+- [Documentação do dynamic](https://www.swi-prolog.org/pldoc/man?predicate=dynamic/1) acesso 13/12/2024.
+- [Documentação do findall](https://www.swi-prolog.org/pldoc/man?predicate=findall/3)acesso 13/12/2024.
+- [Introdução ao Paradigma Lógico](https://leandromoh.gitbooks.io/tcc-paradigmas-de-programacao/content/6_paradigma_logico/index.html) acesso 13/12/2024.
