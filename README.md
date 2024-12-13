@@ -285,6 +285,11 @@ Procure:
 OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
 TEMPO: +/- 15min
 
+## Video
+
+Você pode assistir a aprensentação clicando [aqui](https://youtu.be/ZCiMLfLJnKY)
+ou pelo video no repositório [g4-paradigmas-logico.mp4](g4-paradigmas-logico.mp4).
+
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 
