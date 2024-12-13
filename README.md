@@ -132,9 +132,9 @@ Sinta-se à vontade para contribuir com melhorias ou relatar problemas no reposi
 
 ## Uso 
 
-Esse projeto é um jogo de adivinhação de animais, em que o sistema faz perguntas ao usuário para tentar adivinhar qual é o animal que ele está pensando. O projeto foi implementado em Prolog com a biblioteca `pce` para a interface gráfica.
+Este projeto é um jogo de adivinhação de animais, onde o sistema faz perguntas ao usuário para tentar descobrir qual animal ele está pensando. O projeto possui duas versões: uma prototípica, implementada no terminal, e uma versão final, desenvolvida em Prolog com a biblioteca `pce`, que oferece uma interface gráfica.
 
-A seguir, explicamos como usar o projeto, com base nas interações com a interface gráfica ou o terminal.
+A seguir, explicamos como utilizar o projeto final com a interface gráfica e, em seguida, a versão prototípica, que pode ser executada diretamente no terminal.
 
 ### Como Rodar o Projeto
 
@@ -218,6 +218,53 @@ O fluxo do jogo pode ser resumido como:
 - Adivinhação: O sistema tenta adivinhar o animal.
 - Erro: Caso o sistema erre, o usuário pode adicionar um novo animal à base de dados.
 - Finalização: O jogo pode ser reiniciado ou finalizado.
+
+### Execução da Versão Prototípica 
+
+1. **Abra o terminal.**
+2. **Execute o SWI-Prolog** com o comando:
+
+```bash
+swipl
+```
+
+3. Carregue o arquivo **prototipo** com o comando:
+
+```prolog
+?- [prototipo].
+```
+
+. Se tudo der certo, você deve receber o seguinte retorno:
+
+```prolog
+?- [prototipo].
+true.
+```
+
+4. Execute a função principal (main) da seguinte forma:
+
+```prolog
+?- main.
+```
+Após isso, você poderá interagir com o sistema respondendo às perguntas com "sim", "não" ou "não sei".
+
+![Inicio Terminal](./imagens/inicio_terminal.png)
+
+Responda às perguntas até que o Adivinhator descubra o animal que você pensou:
+
+![Animal Encontrado](./imagens/animal_encontrado.png)
+
+Caso ele não consiga adivinhar o animal, será exibida a seguinte mensagem:
+
+![Animal nao Encontrado](./imagens/animal_naoEncontrado.png)
+
+Depois de finalizar vc pode decidir se quer jogar de novo respondendo com "s." ou "n." :
+
+![Jogar novamente](./imagens/jogar_novamente.png)
+
+### Observações
+
+A versão terminal não requer a biblioteca ``pce``, pois não há interface gráfica e também não possui a funcionalidade de adicionar um novo animal.
 
 ## Vídeo
 Adicione 1 ou mais vídeos com a execução do projeto.
